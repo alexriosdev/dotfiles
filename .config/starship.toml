@@ -8,7 +8,7 @@ ${custom.git_prefix}\
 $git_branch\
 $git_commit\
 ${custom.git_suffix}\
-${custom.git_status_dirty} 
+${custom.git_status_dirty}
 """
 
 right_format = """
@@ -32,30 +32,27 @@ format = "[ $hash$tag]($style)"
 style = "bold red"
 
 [custom.git_prefix]
-when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+when = 'git rev-parse --is-inside-work-tree'
 symbol = "git:\\("
-style = "bold blue"
 format = "[$symbol]($style)"
-shell = ["sh"]
+style = "bold blue"
 
 [custom.git_suffix]
-when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
-symbol = "\\)"
-style = "bold blue"
+when = 'git rev-parse --is-inside-work-tree'
+symbol = "\\) "
 format = "[$symbol]($style)"
-shell = ["sh"]
+style = "bold blue"
 
 [custom.git_status_dirty]
-when = 'test -n "$(git status --porcelain 2>/dev/null)"'
-symbol = "*"
+when = 'test -n "$(git status --porcelain)"'
+symbol = "* "
+format = "[$symbol]($style)"
 style = "bold yellow"
-format = " [$symbol]($style)"
-shell = ["sh"]
 
 [python]
-format = "[$virtualenv]($style) "
+format = "[$virtualenv]($style)"
 style = "bright-black"
 
 [golang]
-format = "[$version]($style) "
+format = "[$version]($style)"
 style = "bright-black"
