@@ -19,6 +19,7 @@ alias ls='ls --color'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
+alias lg='lazygit'
 alias reload='source ~/.zshrc'
 
 # History
