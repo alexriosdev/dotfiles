@@ -17,4 +17,5 @@
     undo = reset HEAD~1 --mixed
     res = !git reset --hard
     done = !git push origin HEAD
-    lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+    lg = !git log --pretty=format:\"%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(green)(%cr) [%an]\" --abbrev-commit
+    tree = !git log --all --decorate --oneline --graph
