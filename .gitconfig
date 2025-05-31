@@ -8,7 +8,7 @@
 	smudge = git-lfs smudge -- %f
 [alias]
     s = status
-    cm = commit -m
+    cm = !git add -A && git commit -m
     co = checkout
     cob = checkout -b
     del = branch -D    
