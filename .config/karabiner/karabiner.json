@@ -9,7 +9,7 @@
               {
                 "from": { "key_code": "escape" },
                 "parameters": {
-                  "basic.to_if_held_down_threshold_milliseconds": 50
+                  "basic.to_if_held_down_threshold_milliseconds": 250
                 },
                 "to_after_key_up": [
                   {
@@ -56,7 +56,6 @@
           },
           {
             "description": "left_command + escape to left_shift + tab (laptop)",
-            "enabled": false,
             "manipulators": [
               {
                 "from": {
@@ -176,8 +175,7 @@
             ]
           },
           {
-            "description": "left_control + u/o to page_up/page_down",
-            "enabled": false,
+            "description": "left_control + u/i to page_down/page_up",
             "manipulators": [
               {
                 "from": {
@@ -187,18 +185,18 @@
                     "optional": ["any"]
                   }
                 },
-                "to": [{ "key_code": "page_up" }],
+                "to": [{ "key_code": "page_down" }],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "o",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": ["left_control"],
                     "optional": ["any"]
                   }
                 },
-                "to": [{ "key_code": "page_down" }],
+                "to": [{ "key_code": "page_up" }],
                 "type": "basic"
               }
             ]
@@ -303,7 +301,7 @@
             ]
           },
           {
-            "description": "right_command + u/o to page_up/page_down",
+            "description": "right_command + u/i to page_down/page_up",
             "manipulators": [
               {
                 "from": {
@@ -313,18 +311,18 @@
                     "optional": ["any"]
                   }
                 },
-                "to": [{ "key_code": "page_up" }],
+                "to": [{ "key_code": "page_down" }],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "o",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": ["right_command"],
                     "optional": ["any"]
                   }
                 },
-                "to": [{ "key_code": "page_down" }],
+                "to": [{ "key_code": "page_up" }],
                 "type": "basic"
               }
             ]
