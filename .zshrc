@@ -21,6 +21,7 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias lg='lazygit'
 alias reload='source ~/.zshrc'
+alias rider='open -na "Rider.app" --args nosplash "$@"'
 
 # History
 HISTFILE=~/.zsh_history
