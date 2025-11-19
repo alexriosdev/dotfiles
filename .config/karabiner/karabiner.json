@@ -350,6 +350,34 @@
                 "to": [{ "key_code": "page_up" }]
               }
             ]
+          },
+          {
+            "description": "disable command + h to prevent hiding current application",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["command"]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "description": "disable command + option + h to prevent hiding all other applications",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["command", "option"]
+                  }
+                }
+              }
+            ]
           }
         ]
       },
